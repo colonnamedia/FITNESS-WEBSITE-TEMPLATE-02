@@ -3,7 +3,19 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "scripts": {"dev":"vite","build":"vite build","preview":"vite preview"},
-  "dependencies": {"@vitejs/plugin-react":"latest","vite":"latest","typescript":"latest","react":"latest","react-dom":"latest","lucide-react":"latest"},
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && node prerender.mjs && node scripts/check-public-html.mjs",
+    "preview": "vite preview",
+    "check:html": "node scripts/check-public-html.mjs"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "latest",
+    "vite": "latest",
+    "typescript": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "lucide-react": "latest"
+  },
   "devDependencies": {}
 }
